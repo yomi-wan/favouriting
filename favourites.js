@@ -1,6 +1,6 @@
 //schedule id adding for faves
 $(document).ready(function(){
-	$('.event-list .w-dyn-item').each(function() {
+	$('#favList .w-dyn-item').each(function() {
 		$(this).attr('id', $(this).children('.idtext').text());
 	});
 });
@@ -11,14 +11,14 @@ $(document).ready(function(){
 var newfavorites = JSON.parse(localStorage.getItem('newfavorites')) || [];
 // add class 'fav' to each favorite
 newfavorites.forEach(function(newfavorite) {
-	let element = document.getElementById(newfavorite);
+let element = document.getElementById(newfavorite);
   let favBtn = element.querySelector('.fav-btn');
 	if (element) {
 		favBtn.classList.add('fav');
 	}
 });
 // register click event listener
-const events = document.querySelectorAll('.event-wrapper');
+const events = document.querySelectorAll('#favList .w-dyn-item');
 events.forEach(function(event) {
 event.addEventListener('click', function() {
   var id = event.id,

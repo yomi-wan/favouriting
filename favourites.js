@@ -1,7 +1,7 @@
 //schedule id adding for faves
 $(document).ready(function(){
 	$('.event-list .w-dyn-item').each(function() {
-		$(this).attr('id', $(this).children('.idtext').text().replace(/\s/g,''));
+		$(this).attr('id', $(this).children('.idtext').text());
 	});
 });
 

@@ -11,11 +11,14 @@ Will need the following set up for favouriting to work.
 change 'version' to the latest commit. 
 ```
 
-2. To your Collection List Wrapper give and ID called 'favList'
-3. Directly inside the Collection Item add an embed, use the drop down to grab the slug. Give the embed a class of 'idtext'. This will make sure that id has no spaces and, is unique to the item.
-4. Create interaction link, for the favouriting and unfavouriting. Give it the class of 'fav-btn' style the default state. eg. empty heart icon
-5. Next add a combo class of 'fav' for the favourite state & style eg. filled in heart icon 
-6. remove combo class and publish.
+2. To your Collection List Wrapper give an ID called 'favList'
+3. Directly inside the Collection Item add an embed block, use the drop down to grab the slug. 
+4. Give the embed a class of 'idtext'. This will make sure that id has no spaces and, is unique to the item.
+5. Create interaction link, for the favouriting and unfavouriting. Give it the class of 'fav-btn' style the default state. eg. empty heart icon
+6. Next add a combo class of 'fav' for the favourite state & style eg. filled in heart icon 
+7. Remove 'fav' class and publish. 
+
+>We do this so the default state is not showing that its favourited
 
 ### If would want a favourites only listing
 
@@ -23,3 +26,5 @@ You will need these two extra steps.
 
 1. Add class 'only-fav' to the Collection Item
 2. style with Display None.
+
+>We do this so the default state is not showing all.

@@ -1,4 +1,4 @@
-# favouriting
+# Favouriting
 
 This code allows for favouriting Webflow collection items, storing the data in LocalStorage. 
 
@@ -16,3 +16,10 @@ change 'version' to the latest commit.
 4. Create interaction link, for the favouriting and unfavouriting. Give it the class of 'fav-btn' style the default state. eg. empty heart icon
 5. Next add a combo class of 'fav' for the favourite state & style eg. filled in heart icon 
 6. remove combo class and publish.
+
+### If would want a favourites only listing
+
+You will need these two extra steps. 
+
+1. Add class 'only-fav' to the Collection Item
+2. style with Display None.

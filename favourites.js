@@ -15,8 +15,8 @@ newfavorites.forEach(function(newfavorite) {
 let element = document.getElementById(newfavorite);
 	if (element) {
 		element.classList.add('fav');
-        if (element.classList.contains('only-fav')){
-            element.style.display = "block";
+        if (element.parent( ".w-dyn-item" ).classList.contains('only-fav')){
+            element.parent( ".w-dyn-item" ).style.display = "block";
         }
 	}
 });
@@ -34,14 +34,14 @@ event.addEventListener('click', function() {
     newfavorites.push(id);
     event.classList.add('fav');
     if (event.classList.contains('only-fav')){
-        event.style.display = "block";
+        event.parent( ".w-dyn-item" ).style.display = "block";
     }
   // item is already favorite
   } else {
     newfavorites.splice(index, 1);
     event.classList.remove('fav');
     if (event.classList.contains('only-fav')){
-        event.style.display = "none";
+        event.parent( ".w-dyn-item" ).style.display = "none";
     }
   }
   // store array in local storage

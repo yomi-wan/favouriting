@@ -1,8 +1,9 @@
 //schedule id adding for faves
 $(document).ready(function(){
 	$('#favList .w-dyn-item').each(function() {
-		$(this).attr('id', $(this).children('.idtext').text());
-	}); 
+    var favwrap = $(this).find('.fav-btn')
+    favwrap.attr('id', favwrap.next('.idtext').text());
+  }); 
 });
 
 //fav code
@@ -13,33 +14,32 @@ var newfavorites = JSON.parse(localStorage.getItem('newfavorites')) || [];
 newfavorites.forEach(function(newfavorite) {
 let element = document.getElementById(newfavorite);
 	if (element) {
-		element.querySelector('.fav-btn').classList.add('fav');
+		element.classList.add('fav');
         if (element.classList.contains('only-fav')){
             element.style.display = "block";
         }
 	}
 });
 
-// register click event listener
+// register click event listener on fav-btn only
 const events = document.querySelectorAll('#favList .w-dyn-item');
 events.forEach(function(event) {
 event.addEventListener('click', function() {
   var id = event.id,
-      index = newfavorites.indexOf(id),
-      fav = event.querySelector('.fav-btn');
+      index = newfavorites.indexOf(id);
   // return if target doesn't have an id (shouldn't happen)
   if (!id) return;
   // item is not favorite
   if (index == -1) {
     newfavorites.push(id);
-    fav.classList.add('fav');
+    event.classList.add('fav');
     if (event.classList.contains('only-fav')){
         event.style.display = "block";
     }
   // item is already favorite
   } else {
     newfavorites.splice(index, 1);
-    fav.classList.remove('fav');
+    event.classList.remove('fav');
     if (event.classList.contains('only-fav')){
         event.style.display = "none";
     }

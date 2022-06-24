@@ -12,9 +12,9 @@ change 'version' to the latest commit.
 ```
 
 2. To your Collection List Wrapper give an ID called 'favList'
-3. Directly inside the Collection Item add an embed block, use the drop down to grab the slug. 
-4. Give the embed a class of 'idtext'. This will make sure that id has no spaces and, is unique to the item.
-5. Create interaction link, for the favouriting and unfavouriting. Give it the class of 'fav-btn' style the default state. eg. empty heart icon
+3. Give the embed a class of 'idtext'. This will make sure that id has no spaces and, is unique to the item.
+4. Create interaction link, for the favouriting and unfavouriting. Give it the class of 'fav-btn' style the default state. eg. empty heart icon
+5. Directly after 'fav-btn' add an embed block, give emded class 'idtext', use the drop down to grab the slug
 6. Next add a combo class of 'fav' for the favourite state & style eg. filled in heart icon 
 7. Remove 'fav' class and publish. 
 

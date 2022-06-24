@@ -15,8 +15,8 @@ newfavorites.forEach(function(newfavorite) {
 let element = document.getElementById(newfavorite);
 	if (element) {
 		element.classList.add('fav');
-        if (element.parent( ".w-dyn-item" ).classList.contains('only-fav')){
-            element.parent( ".w-dyn-item" ).style.display = "block";
+        if (element.closest( ".w-dyn-item" ).classList.contains('only-fav')){
+            element.closest( ".w-dyn-item" ).style.display = "block";
         }
 	}
 });
@@ -33,15 +33,15 @@ event.addEventListener('click', function() {
   if (index == -1) {
     newfavorites.push(id);
     event.classList.add('fav');
-    if (event.parent( ".w-dyn-item" ).classList.contains('only-fav')){
-        event.parent( ".w-dyn-item" ).style.display = "block";
+    if (event.closest( ".w-dyn-item" ).classList.contains('only-fav')){
+        event.closest( ".w-dyn-item" ).style.display = "block";
     }
   // item is already favorite
   } else {
     newfavorites.splice(index, 1);
     event.classList.remove('fav');
-    if (event.parent( ".w-dyn-item" ).classList.contains('only-fav')){
-        event.parent( ".w-dyn-item" ).style.display = "none";
+    if (event.closest( ".w-dyn-item" ).classList.contains('only-fav')){
+        event.closest( ".w-dyn-item" ).style.display = "none";
     }
   }
   // store array in local storage

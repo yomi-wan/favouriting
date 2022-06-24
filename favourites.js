@@ -22,7 +22,7 @@ let element = document.getElementById(newfavorite);
 });
 
 // register click event listener on fav-btn only
-const events = document.querySelectorAll('#favList .w-dyn-item');
+const events = document.querySelectorAll('#favList .fav-btn');
 events.forEach(function(event) {
 event.addEventListener('click', function() {
   var id = event.id,

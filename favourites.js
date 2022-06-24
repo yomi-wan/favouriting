@@ -33,14 +33,14 @@ event.addEventListener('click', function() {
   if (index == -1) {
     newfavorites.push(id);
     event.classList.add('fav');
-    if (event.classList.contains('only-fav')){
+    if (event.parent( ".w-dyn-item" ).classList.contains('only-fav')){
         event.parent( ".w-dyn-item" ).style.display = "block";
     }
   // item is already favorite
   } else {
     newfavorites.splice(index, 1);
     event.classList.remove('fav');
-    if (event.classList.contains('only-fav')){
+    if (event.parent( ".w-dyn-item" ).classList.contains('only-fav')){
         event.parent( ".w-dyn-item" ).style.display = "none";
     }
   }
